@@ -1,5 +1,6 @@
 ## Docker knife
 
+`docker pull stevengonsalvez/docker-knife:latest` to run the public image.
 
 Normally application images are tiny, distroless and hard to do any live debugging on issues.A image baked in with tools to debug any type of issues on demand
 
