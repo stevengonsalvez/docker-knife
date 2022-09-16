@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/**'
+      - '.github/workflows/build-and-push.yml'
       - 'server/**'
       - 'Dockerfile'
       - 'azure/**
