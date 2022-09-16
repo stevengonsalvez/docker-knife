@@ -33,6 +33,7 @@ RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false upd
         openssl \
         openssh-client \
         psmisc \
+        postgresql-client \
         socat \
         tcpdump \
         telnet \
@@ -81,6 +82,10 @@ RUN mkdir -p /tmp
 COPY azure/ssh_setup.sh /tmp
 RUN chmod +x /tmp/ssh_setup.sh \
     && (sleep 1;/tmp/ssh_setup.sh 2>&1 > /dev/null)
+
+# Exposing a server
+COPY server/hello /usr/local/bin/hello
+RUN chmod +x /usr/local/bin/hello 
 
 # Open port 2222 for SSH access
 EXPOSE 80 2222

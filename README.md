@@ -15,3 +15,6 @@ Normally application images are tiny, distroless and hard to do any live debuggi
 > debugging
 
 `docker exec -it <container> bash`
+
+
+> SSH to container and a simple http server provisioned, to allow to run this in Azure webapps 
