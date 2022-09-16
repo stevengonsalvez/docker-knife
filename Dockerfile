@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 RUN sed -i 's:^path-exclude=/usr/share/man:#path-exclude=/usr/share/man:' /etc/dpkg/dpkg.cfg.d/excludes
 RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update && \
     export DEBIAN_FRONTEND=noninteractive && \
